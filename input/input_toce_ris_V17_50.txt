@@ -1,0 +1,19 @@
+toce_ris_V17_50     ! file name BASE with input files for initial conditions, bathymetry, output and boundary conditions
+START 0.                   ! t0, beginning time (hours)
+END 1.4888888888888889E-02                   ! tlast, simulation time 
+DTOUTPUT 6.944444444444444E-05     !in hours
+CR 0.4                 ! CR, courant number 
+LIMITER 3                    ! limiter, (1 van leer, 2 van albada, 3 minbee, 4 superbee) 
+YEPS 1.E-9                ! yeps, water depth treshold for wet/dry cell
+VELEPS 1.E-5    !
+MUSCL -1                   ! R, MUSCL reconstruction -1 UPWIND, 1 CENTERED
+IBINARY 0                    ! IBINARY, input/output (1 for ASCII, 0 for IBINARY)
+AL 2                    ! AL 0 SGM puro, 1 DGM puro, 2 WSDGM
+SR 1                    ! SR, 1 strang splitting formulation for friction source term, 0 for godunov formulation
+DTSOGLIA 0.00                   ! dtsoglia, treshold for the time step (if dt<dtsoglia then WARINING is plotted)
+EXPON 1.66667               ! expon, for discharge redistribution at inflow boundary conditions
+AW 0.                   ! A_WSDGM, froude number for the beginning of the DGM trasition 
+BW 2.0                  ! B_WSDGM, end of the DGM transition
+METODO 1                    ! metodo, 2 for HLLC fluxes, 1 for slic fluxes 
+NITER 3                    ! niter, iteration number for correction procedure at wetting/drying fronts
+PENDFARFIELD 1 !
